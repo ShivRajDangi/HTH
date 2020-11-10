@@ -168,7 +168,7 @@ span.psw {
          <!-- <a href="index.html"><img style="border-radius: 50%;"
              src="assets/img/logo.png" alt="" class="img-fluid"></a>
        -->
-       <a href="index.html"><span>HTH</span></a>
+       <a href="index.html"><span>HTH okay</span></a>
       </div>
 
       <nav class="nav-menu d-none d-lg-block">
