@@ -1626,3 +1626,7 @@ section {
 #footer .credits {
   font-size: 13px;
 }
+
+.nav-tabs .nav-item{
+  margin-left:95px;
+}
