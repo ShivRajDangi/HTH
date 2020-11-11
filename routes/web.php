@@ -16,3 +16,15 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('frontend.pages.welcome');
 });
+
+Route::get('startup', function () {
+    return view('frontend.pages.startup');
+});
+
+Route::get('startup-technician', function () {
+    return view('frontend.pages.startup-technician');
+});
+
+Route::get('startup-customer', function () {
+    return view('frontend.pages.startup-customer');
+});
