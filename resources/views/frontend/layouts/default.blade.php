@@ -196,7 +196,7 @@
 
 
 <div class="container-fluid">
-  <div class="jumbotron" style="background-color:#f0f1f3;margin:40px;">
+  <div class="jumbotron" style="background-color:#f0f1f3;margin:100px;">
     <h2 class="text-center"><b>How To Get Your Queries Solved</b></h2><br><br>
     <h5 class=""><b><u>to get Your queries resolved follow these </u>:</b></h5><br><br>
     <div class="row text-center">
@@ -245,7 +245,7 @@
 
 
 <div class="cotainer-fluid" id="about">
-  <div class="container">
+  <div class="container text-center">
     <div class="">
     <h5><b>About Us </b></h5>
   </div>
