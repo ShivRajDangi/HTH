@@ -5,14 +5,14 @@
     use Illuminate\Notifications\Notifiable;
     use Illuminate\Foundation\Auth\User as Authenticatable;
 
-    class Technician extends Authenticatable
+    class Admin extends Authenticatable
     {
         use Notifiable;
 
-        protected $guard = 'technician';
+        protected $guard = 'admin';
 
         protected $fillable = [
-            'name', 'email', 'password','mobile',
+            'full_name','nice_name', 'email', 'password','mobile','profile_photo','role',
         ];
 
         protected $hidden = [
