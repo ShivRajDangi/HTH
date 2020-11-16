@@ -31,14 +31,7 @@
 </head>
 <body>
 
-  <!-- ======= Top Bar ======= -->
- <!--  <section id="topbar" class="d-none d-lg-flex align-items-center fixed-top topbar-transparent">
-    <div class="container text-right">
-      <i class="icofont-phone"></i> +1 5589 55488 55
-      <i class="icofont-clock-time icofont-rotate-180"></i> Mon-Sat: 11:00 AM - 23:00 PM
-    </div>
-  </section> -->
-
+  
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top d-flex align-items-center header-transparent">
     <div class="container d-flex align-items-center">
@@ -55,12 +48,12 @@
         <ul>
           <li class="active"><a href="index.html">Home</a></li>
           <li><a href="#about">About</a></li>
-          <li><a href="#customer">How It Works</a></li>
+          <li><a href="#howitswork">How It Works</a></li>
           <li><a href="#contact">Team</a></li>
           <li><a href="#contact">Help Forum</a></li>
 
           <li class="book-a-table text-center mx-25"><!-- <a href="{{url('login-signup')}}">START NOW</a> -->
-            <a href="{{url('startup')}}">START NOW</a>
+            <a href="{{url('startup')}}">Sign In</a>
           </li>
         </ul>
       </nav><!-- .nav-menu -->
@@ -77,50 +70,42 @@
         <div class="carousel-inner" role="listbox">
 
           <!-- Slide 1     800*800    -->
-          <div class="carousel-item active" style="background: url(assets/img/slide/slide-5.jpg);">
+          <div class="carousel-item active bg-warning" style="background: url(assets/img/slide/slide-6.jpg);">
             <div class="carousel-container">
               <div class="carousel-content">
-                <h2 class="animate__animated animate__fadeInDown"><span>HTH Everyone's Solution</span></h2>
-                <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
-               <!--  <div>
-                  <a href="#customer" data-toggle="modal" data-target="#customer" class="btn-menu animate__animated animate__fadeInUp scrollto">CUSTOMER LOGIN</a>
-                  <a href="#book-a-table"  data-toggle="modal" data-target="#technician" class="btn-book animate__animated animate__fadeInUp scrollto">TECHNICIAN LOGIN</a>
-                </div> -->
+                <h1><b>Get Answers To Your Queries <br> OR <br> Give Answers To Other's Queries</b></h1><br>
+                <p class="lead">
+                  <a class="btn btn-warning btn-md" href="{{url('startup')}}" role="button" style="border-radius:20px;">START NOW</a>
+                </p>
               </div>
             </div>
           </div>
 
           <!-- Slide 2 -->
-          <div class="carousel-item" style="background: url(assets/img/slide/slide-2.jpg);">
+          <div class="carousel-item bg-success" style="background: url(assets/img/slide/slide-.jpg);">
             <div class="carousel-container">
               <div class="carousel-content">
-                <h2 class="animate__animated animate__fadeInDown"><span>Lorem Ipsum Dolor</span></h2>
-                <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
-               <!--  <div>
-                  <a href="#customer" data-toggle="modal" data-target="#customer" class="btn-menu animate__animated animate__fadeInUp scrollto">CUSTOMER LOGIN</a>
-                  <a href="#book-a-table"  data-toggle="modal" data-target="#technician" class="btn-book animate__animated animate__fadeInUp scrollto">TECHNICIAN LOGIN</a>
-                </div> -->
+                <h1><b>Get Answers To Your Queries <br> OR <br> Give Answers To Other's Queries</b></h1><br>
+                <p class="lead">
+                    <a class="btn btn-success btn-md" href="{{url('startup')}}" role="button" style="border-radius:20px;">START NOW</a>
+                </p> 
               </div>
             </div>
           </div>
 
           <!-- Slide 3 -->
-          <div class="carousel-item" style="background: url(assets/img/slide/slide-3.jpg);">
-            <div class="carousel-background"><img src="assets/img/slide/slide-3.jpg" alt=""></div>
+          <div class="carousel-item bg-danger" style="background: url(assets/img/slide/slide-.jpg);">
+            <div class="carousel-background"><img src="assets/img/slide/slide-.jpg" alt=""></div>
             <div class="carousel-container">
               <div class="carousel-content">
-                <h2 class="animate__animated animate__fadeInDown">Sequi ea ut et est quaerat</h2>
-                <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
-                <!-- <div>
-                  <a href="#customer" data-toggle="modal" data-target="#customer" class="btn-menu animate__animated animate__fadeInUp scrollto">CUSTOMER LOGIN</a>
-                  <a href="#book-a-table"  data-toggle="modal" data-target="#technician" class="btn-book animate__animated animate__fadeInUp scrollto">TECHNICIAN LOGIN</a>
-                </div> -->
+                <h1><b>Get Answers To Your Queries <br> OR <br> Give Answers To Other's Queries</b></h1><br>
+                <p class="lead">
+                  <a class="btn btn-danger btn-md" href="{{url('startup')}}" role="button" style="border-radius:20px;">START NOW</a>
+                </p> 
               </div>
             </div>
           </div>
-
         </div>
-
         <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
           <span class="carousel-control-prev-icon icofont-simple-left" aria-hidden="true"></span>
           <span class="sr-only">Previous</span>
@@ -135,133 +120,130 @@
     </div>
   </section><!-- End Hero -->
 
-
-  <div class="jumbotron text-center" style="background-color:#f1f1f1;margin:30px">
-    <h5>Get Answers To Your Queries <br> OR <br> Give Answers To Other's Queries</h5><br>
-    <p class="lead">
-      <a class="btn btn-primary btn-md" href="#" role="button" style="border-radius:20px;">START NOW</a>
-    </p>
-  </div>
-
-<div class="container-fluid" style="background-color:#f1f1f1; margin-bottom:30px;">
+<!-- <div class="container-fluid"  style="background-color:#f1f1f1; margin-bottom:30px;">
   <div class="container bg-light">
     <div style="height:400px;width:100%;">
       <img src="cinqueterre.jpg" class="rounded" alt="image not available"> 
     </div>
   </div>
-</div>
+</div> -->
 
-<div class="container-fluid" style="background-color:#f1f1f1;">
-  <div class="row">
-    <div class="col-sm-6">
-      <div class="jumbotron">
-         <h2>
-        <b>Use your knowledge to repair and earn, even  from the comfort of your  place </b>
-      </h2>
-      <p>At HTH, we aim to bring people with proficiency  in fixing and repairing, put their knowledge to use  by helping people and earn themselves a living. </p>
+<div class="container-fluid" id="howitswork">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="jumbotron">
+           <h2>
+          <b>Use your knowledge to repair and earn, even  from the comfort of your  place </b>
+        </h2><br>
+        <p>At HTH, we aim to bring people with proficiency  in fixing and repairing, put their knowledge to use  by helping people and earn themselves a living. </p>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="jumbotron text-center" style="height:272px;width:100%;">
+          <img src="assets\img\repair_earn.jpg" height="272px;" alt="image not available"> 
+        </div>
       </div>
     </div>
-    <div class="col-sm-6">
-      <div class="jumbotron" style="height:272px;width:100%;">
-        <img src="cinqueterre.jpg" class="rounded" alt="image not available"> 
+  </div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="jumbotron" style="height:272px;width:100%;">
+          <img src="assets\img\query.jpg" class="rounded;" height="272px;" alt="image not available"> 
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="jumbotron">
+           <h2>
+              <b>Got some Query? Write it here and get it solved via text, call, or even a home service </b>
+            </h2><br><br>
+            <p>Connect to a consultant of your, and we assure you, we will be alongside you until your query is solved.
+            </p>
+        </div>
       </div>
     </div>
   </div>
 </div>
-
-<div class="container-fluid" style="background-color:#f1f1f1;">
-  <div class="row">
-    <div class="col-sm-6">
-      <div class="jumbotron" style="height:272px;width:100%;">
-        <img src="cinqueterre.jpg" class="rounded" alt="image not available"> 
-      </div>
-    </div>
-    <div class="col-sm-6">
-      <div class="jumbotron">
-         <h2>
-            <b>Got some Query? Write it here and get it solved via text, call, or even a home service </b>
-          </h2>
-          <p>Connect to a consultant of your, and we assure you, we will be alongside you until your query is solved.
-          </p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="container-fluid" style="background-color:#f1f1f1; margin-bottom:30px;background-color:red;">
+<hr>
+<!-- <div class="container-fluid" style="background-color:#f1f1f1; margin-bottom:30px;background-color:red;">
   <div class="bg-light" style="height:400px;width:100%;">
     <img src="cinqueterre.jpg" class="rounded" alt="image not available"> 
   </div>
-</div>
+</div> -->
 
 
-<div class="container-fluid">
-  <div class="jumbotron" style="background-color:#f0f1f3;margin:100px;">
-    <h2 class="text-center"><b>How To Get Your Queries Solved</b></h2><br><br>
-    <h5 class=""><b><u>to get Your queries resolved follow these </u>:</b></h5><br><br>
-    <div class="row text-center">
+<div class="container-fluid mt-20">
+  <div class="jumbotron" style="background-color:#f0f1f3;">
+    <h2 class=""><b>How To Get Your Queries Solved</b></h2>
+    <h6 class=""><b>to get Your queries resolved follow these :</b></h6><br>
+    <div class="row">
       <div class="col-md-4">
-        1.
-        <h6 class="text-center"><b>Create Your Account</b></h6>
+        <b>01.</b>
+        <b><p class="text-center steps-heading">Create Your Account</p></b>
         <p>Register your details with us , If you already have an account, login and proceed.</p>
-        <p class="steps" style="margin-top:40px;">______________________</p>
-      </div>
-      <div class="col-md-4">
-        2.
-           <h6 class="text-center"><b>Enter Your Queries</b></h6>
-        <p>Submit query as detailed as possible and wait till the experts reach out.</p>
-        <p>______________________</p>
-      </div>
-      <div class="col-md-4">
-      3.
-         <h6 class="text-center"><b>Choose An Expert</b></h6>
-        <p>Choose an expert of your own choice based on the “RATING OF THE EXPERT”.</p>
-        <p>______________________</p>
+        <div class="steps-line">
         </div>
-    </div>
-
-     <div class="row text-center">
+      </div><br>
       <div class="col-md-4">
-      4.
-         <h6 class="text-center"><b>Choose Your Preffered Mode Of Commucication</b></h6>
+        <b>02.</b>
+           <b><p class="text-center steps-heading">Enter Your Queries</p></b>
+        <p>Submit query as detailed as possible and wait till the experts reach out.</p>
+         <div class="steps-line">
+        </div>
+      </div><br>
+      <div class="col-md-4">
+      <b>03.</b>
+         <b><p class=" text-center steps-heading">Choose An Expert</p></b>
+        <p>Choose an expert of your own choice based on the “RATING OF THE EXPERT”.</p>
+         <div class="steps-line">
+        </div>
+      </div>
+    </div>
+<br><br>
+     <div class="row">
+      <div class="col-md-4">
+      <b>04.</b>
+        <b> <p class="text-center steps-heading">Choose Your Preffered Mode Of Commucication</p></b>
         <p>Choose from the various modes ofcommunication available (Call, Text,Home Service).</p>
-        <p>______________________</p>
-    </div>
+         <div class="steps-line">
+        </div>
+    </div><br>
       <div class="col-md-4">
-        5.
-         <h6 class="text-center"><b>Conect With The Expert</b></h6>
-        <p>The expert will connect with you and will try to solve your query. Please be detailed inexplaining your query.</p>
-        <p>______________________</p>
-      </div>
+        <b>05.</b>
+         <b><p class="text-center steps-heading ">Conect With The Expert</p></b>
+        <p>The expert will connect with you and will try to solve your query. 
+        Please be detailed inexplaining your query.</p>
+        <div class="steps-line">
+        </div>
+      </div><br>
       <div class="col-md-4">
-        6.
-         <h6 class="text-center"><b>Provide A Feedback</b></h6>
+        <b>06.</b>
+         <b><p class="text-center steps-heading">Provide A Feedback</p></b>
           <p>After your query is solved, please give your valued feedback. Be assured we won’t let you go without your query solved.</p>
-        <p>______________________</p>
-      </div>
+           <div class="steps-line">
+        </div>
+      </div><br>
     </div>
   </div>
 </div>
 
 
 <div class="cotainer-fluid" id="about">
-  <div class="container text-center">
-    <div class="">
-    <h5><b>About Us </b></h5>
-  </div>
-  <div class="">
+  <div class="jumbotron">
+    <h4><b>About Us </b></h4>
     <p>HTH is a platform that aims to provide a source of income to those who possess knowledge in any domain by giving them a chance to help others who need help in their profession.  
     We all know that local technicians, electricians, plumbers, and many local people boast vast talent but still cannot make their ends meet due to lack of work. We aim to provide these people a chance to use their expertise in repairing, fixing, and troubleshooting by providing them work of helping others in need and make a living for themselves. 
     We stand forward for the vocal for local initiative by extending our support and work towards our local helpers' betterment.  
     </p>
-    <h5><b>Support our initiative by posting your queries on our platform and contribute towards the betterment of Indian society.</b></h5>
-  </div>
+    <h6><b>Support our initiative by posting your queries on our platform and contribute towards the betterment of Indian society.</b></h6>
   </div>
 </div>
 <hr>
 <div class="container-fluid bg-light ">
   <div class="container bg-grey m-10">
-     <h5><b>Our Team</b></h5>
+     <h2><b>Our Team</b></h2>
       <div class="row">
         <div class="col-sm-6">
           <div class="card">
