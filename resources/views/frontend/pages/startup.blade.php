@@ -13,7 +13,7 @@
 	<div class="row">
 		<div class="col-sm-4 text-center">
 			<div class="jumbotron jumbotron-fluid">
-				<div class="container">
+				<div class="container text-center">
 					<h2><b>Ask Your Query To An Expert</b></h2>
 					<p>Get connected to an expert and get your query solved in a minutes</p>
 					<a href="{{url('startup-customer')}}"><button class="btn btn-button bg-warning" style="border-radius:20px;background-color: !important">Ask A Query</button></a>
@@ -30,7 +30,7 @@
 		</div>
 		<div class="col-sm-4 text-center">
 			<div class="jumbotron jumbotron-fluid">
-				<div class="container">
+				<div class="container text-center">
 					<h2><b>Become An Expert Yourself</b></h2>
 					<p>Use your expertise and become a professional expert for other's queries </p>
 					<a href="{{url('startup-technician')}}"><button  class="btn btn-button bg-warning" style="border-radius:20px;background-color: !important;">Become An Expert</button></a>
