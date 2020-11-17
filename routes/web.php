@@ -33,6 +33,7 @@ Auth::routes();
 
 Route::get('/customer-home', 'Auth\HomeController@index')->name('home');
 Route::post('/customer/logout', 'Auth\LoginController@customerLogout')->name('customer.logout');
+Route::post('login', 'Auth\LoginController@showLoginForm')->name('login');
 Route::prefix('admin')->group( function () {
 
 	//dashboard route

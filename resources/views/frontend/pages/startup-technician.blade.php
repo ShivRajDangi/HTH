@@ -33,24 +33,29 @@
 		        <div class="card text-center">
 		            <div class="card-header bg-warning"> Technician Login </div>
 			            <div class="card-body">
-				            <form>
+				            <form method="POST" action="{{ route('technician.login.submit') }}">
+				            	@csrf
 					            <div class="form-group text-left">
 						            <label for="technician_email">Email address</label>
-						            <input type="email" class="form-control" id="technician_email" aria-describedby="emailHelp" placeholder="Enter email" name="technician_email">
+						            <input type="email" class="form-control" id="technician_email" aria-describedby="emailHelp" placeholder="Enter email" name="email">
 					            </div>
 					            <div class="form-group text-left">
 						            <label for="technician_password">Password</label>
-						            <input type="password" class="form-control" id="technician_password" placeholder="Password" name="technician_password">
+						            <input type="password" class="form-control" id="technician_password" placeholder="Password" name="password">
 					            </div>
 					            <div class="form-check text-left">
 						            <input type="checkbox" class="form-check-input" id="exampleCheck1">
 						            <label class="form-check-label" for="exampleCheck1">Check me out</label>
 					            </div>
-				            	<button type="submit" class="btn btn-success" style="margin-top: -50px;"> Login </button>
+				            	<!-- <button type="submit" class="btn btn-success" style="margin-top: -50px;"> Login </button> -->
+				            	 <button type="submit" class="btn btn-primary">
+                                 {{ __('Login') }}
+                             </button>
 				            </form> 
-				            <div class="text-center">
-				            	<a href=""><button type="button" class="btn btn-primary"><i class="bx bxl-google mr-2"></i><span>|</span><span class="m-3">Google Login </span></button></a>  
-				            </div>
+
+				            <div class="text-center mt-2">
+		                  		<a href=""><button type="button" class="btn btn-primary btn-sm"><i class="bx bxl-google mr-2"></i><span>|</span><span class="m-3">Google Login </span></button></a>  
+		                	</div>
 			            </div>
 		            <div class="card-footer text-muted p-3 bg-warning">
 			            <div class="text-left">

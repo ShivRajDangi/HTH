@@ -14,7 +14,7 @@ class TechnicianLoginController extends Controller
         $this->middleware('guest:technician')->except('logout');
     }
     public function showLoginForm() {
-    	return view('auth.technician-login');
+    	return redirect('startup-technician');
     }
     public function login(Request $request) {
     	//validiate form data

@@ -40,6 +40,9 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('customerLogout');
     }
+    public function showLoginForm() {
+        return redirect('startup-customer');
+    }
     public function customerLogout(Request $request) {
       
         Auth::guard('web')->logout();

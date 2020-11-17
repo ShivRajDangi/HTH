@@ -140,8 +140,8 @@
         </div>
       </div>
       <div class="col-sm-6">
-        <div class="jumbotron text-center" style="height:272px;width:100%;">
-          <img src="assets\img\repair_earn.jpg" height="272px;" alt="image not available"> 
+        <div class="jumbotron text-center" style="height:310px;width:100%;">
+          <img src="assets\img\repair_earn.jpg" height="310px;" alt="image not available"> 
         </div>
       </div>
     </div>
@@ -150,8 +150,8 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-sm-6">
-        <div class="jumbotron" style="height:272px;width:100%;">
-          <img src="assets\img\query.jpg" class="rounded;" height="272px;" alt="image not available"> 
+        <div class="jumbotron" style="height:450px;width:100%;">
+          <img src="assets\img\query.jpg" class="rounded;" height="450px;" alt="image not available"> 
         </div>
       </div>
       <div class="col-sm-6">
@@ -167,18 +167,18 @@
   </div>
 </div>
 <hr>
-<!-- <div class="container-fluid" style="background-color:#f1f1f1; margin-bottom:30px;background-color:red;">
+<div class="container-fluid">
   <div class="bg-light" style="height:400px;width:100%;">
-    <img src="cinqueterre.jpg" class="rounded" alt="image not available"> 
+    <img src="assets\img\setting.jpg" height="400px;" width="100%;" class="rounded" alt="image not available"> 
   </div>
-</div> -->
+</div>
 
 
 <div class="container-fluid mt-20">
   <div class="jumbotron" style="background-color:#f0f1f3;">
     <h2 class=""><b>How To Get Your Queries Solved</b></h2>
     <h6 class=""><b>to get Your queries resolved follow these :</b></h6><br>
-    <div class="row">
+    <div class="row" style="margin-left:2%;">
       <div class="col-md-4">
         <b>01.</b>
         <b><p class="text-center steps-heading">Create Your Account</p></b>
@@ -202,7 +202,7 @@
       </div>
     </div>
 <br><br>
-     <div class="row">
+     <div class="row" style="margin-left:2%;">
       <div class="col-md-4">
       <b>04.</b>
         <b> <p class="text-center steps-heading">Choose Your Preffered Mode Of Commucication</p></b>
@@ -229,15 +229,20 @@
   </div>
 </div>
 
+<!-- <div class="container-fluid" style="background-color:#f1f1f1; margin-bottom:30px;background-color:red;">
+  <div class="bg-light" style="height:400px;width:100%;">
+    <img src="cinqueterre.jpg" class="rounded" alt="image not available"> 
+  </div>
+</div> -->
 
 <div class="cotainer-fluid" id="about">
   <div class="jumbotron">
-    <h4><b>About Us </b></h4>
+    <h2><b>About Us </b></h2>
     <p>HTH is a platform that aims to provide a source of income to those who possess knowledge in any domain by giving them a chance to help others who need help in their profession.  
     We all know that local technicians, electricians, plumbers, and many local people boast vast talent but still cannot make their ends meet due to lack of work. We aim to provide these people a chance to use their expertise in repairing, fixing, and troubleshooting by providing them work of helping others in need and make a living for themselves. 
     We stand forward for the vocal for local initiative by extending our support and work towards our local helpers' betterment.  
     </p>
-    <h6><b>Support our initiative by posting your queries on our platform and contribute towards the betterment of Indian society.</b></h6>
+    <h4><b>Support our initiative by posting your queries on our platform and contribute towards the betterment of Indian society.</b></h4>
   </div>
 </div>
 <hr>
