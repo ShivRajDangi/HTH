@@ -19,9 +19,9 @@ h1{
   color:white;
   font-size:5vw;
 }
-button{
-  color:cofee;
-}
+
+
+
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
@@ -139,6 +139,26 @@ button{
   width:2px;
   height:50%;
   background-color:green;
+}
+.hidden_content{
+  display:none;
+  color:green;
+}
+
+@media (max-width: 576px) {
+  .first_seprator{
+  display:none;
+}
+  .or{
+    display:none;
+  }
+  .second_seprator{
+    display:none;
+  }
+  .hidden_content{
+    display:block;
+  }
+
 }
 
 
@@ -1670,4 +1690,4 @@ p {
 }
 
 #about p{
-  font-size:1.2vw;}
+  font-size:1.1vw;}

@@ -14,9 +14,9 @@
 		<div class="col-sm-4 text-center">
 			<div class="jumbotron jumbotron-fluid">
 				<div class="container">
-					<h2>Get Professional Technicians</h2>
-					<p>Hire a Technician </p>
-					<a href="{{url('startup-customer')}}"><button class="btn btn-button bg-warning" style="border-radius:20px;">Hire a Technician</button></a>
+					<h2><b>Ask Your Query To An Expert</b></h2>
+					<p>Get connected to an expert and get your query solved in a minutes</p>
+					<a href="{{url('startup-customer')}}"><button class="btn btn-button bg-warning" style="border-radius:20px;background-color:#6f4e37 !important">Ask A Query</button></a>
 				</div>
 			</div>
 		</div>
@@ -25,14 +25,15 @@
 				<div class="second_seprator"></div>
 				<span class="or">OR</span>
 				<div class="first_seprator"></div>
-			
+
+				<div class="hidden_content">---------------- OR ---------------</div>
 		</div>
 		<div class="col-sm-4 text-center">
 			<div class="jumbotron jumbotron-fluid">
 				<div class="container">
-					<h2>Get a Business</h2>
-					<p>here will be text </p>
-					<a href="{{url('startup-technician')}}"><button  class="btn btn-button bg-warning" style="border-radius:20px;">Get a Business</button></a>
+					<h2><b>Become An Expert Yourself</b></h2>
+					<p>Use your expertise and become a professional expert for other's queries </p>
+					<a href="{{url('startup-technician')}}"><button  class="btn btn-button bg-warning" style="border-radius:20px;background-color:#6f4e37 !important;">Become An Expert</button></a>
 
 				</div>
 			</div>
