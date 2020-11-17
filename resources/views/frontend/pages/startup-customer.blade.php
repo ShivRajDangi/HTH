@@ -11,10 +11,10 @@
 ------------------------------------->
 <div class="container P-2">
 	<div class="card text-center p-5" style="margin-top:20%">
-		<div class="card-header"> Signup To Hire a Technician </div>
+		<div class="card-header"> <h4><b>Signup To Ask your Queries To An Expert </b></h4></div>
 		<div class="card-body ">
 			<p>Already have an account ? <a href="" data-toggle="modal" data-target="#customer">Log In</a></p>
-			<button class="btn btn-button bg-warning  btn-xl" ><i class="bx bxl-google bg-white"></i><span class="m-2">|</span>Continue With Google</button> 
+			<button class="btn btn-button bg-warning  btn-xl" style="border-radius:20px;" ><i class="bx bxl-google bg-white"></i><span class="m-2">|</span>Continue With Google</button> 
 		</div>
 	</div>
 </div>
