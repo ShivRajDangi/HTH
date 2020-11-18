@@ -35,26 +35,22 @@
 			            <div class="card-body">
 				            <form method="POST" action="{{ route('technician.login.submit') }}">
 				            	@csrf
-					             <div class="form-group text-left">
-                    <label for="technician_name">Name</label>
-                    <input type="email" class="form-control" id="technician_name" aria-describedby="emailHelp" placeholder="Enter Name" name="technician_name">
-                  </div>
+					             
                   <div class="form-group text-left">
                     <label for="technician_mobile">Mobile</label>
                     <input type="email" class="form-control" id="technician_mobile" aria-describedby="emailHelp" placeholder="Enter Mobile" name="technician_mobile">
                   </div>
+
                   <div class="form-group text-left">
-                    <label for="technician_email">Email address</label>
-                    <input type="email" class="form-control" id="technician_email" aria-describedby="emailHelp" placeholder="Enter email" name="technician_email">
+                    <label for="technician_email">Business Email</label>
+                    <input type="email" class="form-control" id="technician_email" aria-describedby="emailHelp" placeholder="Enter Business email" name="technician_email">
                   </div>
-                  <div class="form-group text-left">
-                    <label for="technician_password">Password</label>
-                    <input type="password" class="form-control" id="technician_password" placeholder="Password" name="technician_password">
-                  </div>
+
                   <div class="form-group text-left">
                     <label for="technician_address">Address</label>
                     <input type="text" class="form-control" id="technician_address" aria-describedby="emailHelp" placeholder="Enter Address" name="technician_address">
                   </div>
+
                   <div class="form-group text-left">
                     <label for="technician_question">Do you have full time job or part time job in your field</label>
                     <div class="form-check">

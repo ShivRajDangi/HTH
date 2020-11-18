@@ -167,17 +167,15 @@
   </div>
 </div>
 <hr>
-<div class="container-fluid">
-  <div class="bg-light" style="height:400px;width:100%;">
-    <img src="assets\img\setting.jpg" height="400px;" width="100%;" class="rounded" alt="image not available"> 
-  </div>
-</div>
+<!-- <div class="container-fluid" style="height:400px;width:100%;"> -->
+  <img src="assets\img\setting.jpg" height="400px;" width="100%;" class="rounded" alt="image not available"> 
+<!-- </div> -->
 
 
 <div class="container-fluid mt-20">
-  <div class="jumbotron" style="background-color:#f0f1f3;">
+  <div class="jumbotron" style="background-color:#f0f1f3;padding-left:10%;padding-right:10%;">
     <h2 class=""><b>How To Get Your Queries Solved</b></h2>
-    <h6 class=""><b>to get Your queries resolved follow these :</b></h6><br>
+    <p class=""><b>TO GET YOUR QUERIES RESOLVED FOLLOW THESE STEPS :</b></p><br><br>
     <div class="row" style="margin-left:2%;">
       <div class="col-md-4">
         <b>01.</b>
@@ -237,7 +235,7 @@
 
 <div class="cotainer-fluid" id="about">
   <div class="jumbotron">
-    <h2><b>About Us </b></h2>
+    <h2 class="text-center"><b>About Us </b></h2><br>
     <p>HTH is a platform that aims to provide a source of income to those who possess knowledge in any domain by giving them a chance to help others who need help in their profession.  
     We all know that local technicians, electricians, plumbers, and many local people boast vast talent but still cannot make their ends meet due to lack of work. We aim to provide these people a chance to use their expertise in repairing, fixing, and troubleshooting by providing them work of helping others in need and make a living for themselves. 
     We stand forward for the vocal for local initiative by extending our support and work towards our local helpers' betterment.  

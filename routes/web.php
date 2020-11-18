@@ -34,7 +34,7 @@ Auth::routes();
 Route::get('/customer-home', 'Auth\HomeController@index')->name('home');
 Route::post('/customer/logout', 'Auth\LoginController@customerLogout')->name('customer.logout');
 Route::get('/login', 'Auth\LoginController@showLoginForm')->name('login');
-Route::post('/query-submit', 'Auth\LoginController@querySubmit')->name('query.submit');
+
 
 Route::prefix('admin')->group( function () {
 
@@ -60,11 +60,12 @@ Route::prefix('technician')->group( function () {
 
 	Route::get('technician-signup-2', function () {
     return view('technician.technician-signup-2');
-});
+	});
 
 	//login route
 	Route::get('/login','Auth\TechnicianLoginController@showLoginForm')->name('technician.login');
 	Route::post('/login','Auth\TechnicianLoginController@login')->name('technician.login.submit');
+	Route::post('/query-submit', 'Auth\LoginController@querySubmit')->name('technician.query.submit');
 
 	//logout route
 	Route::post('/logout','Auth\TechnicianLoginController@logout')->name('technician.logout');
