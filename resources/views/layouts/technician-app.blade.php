@@ -87,8 +87,6 @@
                                 </div>
                             </li>
                             @endif
-                           
-
                         @endguest
                     </ul>
                 </div>
