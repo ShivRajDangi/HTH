@@ -9,10 +9,8 @@
     {
         use Notifiable;
 
-        protected $guard = 'technician';
-
         protected $fillable = [
-            'name', 'email', 'password',
+            'name', 'email', 'password','google_id',
         ];
 
         protected $hidden = [

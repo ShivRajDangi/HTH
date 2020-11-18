@@ -35,6 +35,11 @@ Route::get('/customer-home', 'Auth\HomeController@index')->name('home');
 Route::post('/customer/logout', 'Auth\LoginController@customerLogout')->name('customer.logout');
 Route::get('/login', 'Auth\LoginController@showLoginForm')->name('login');
 
+//Google routes
+Route::get('auth/google', 'Auth\GoogleController@redirectToGoogle');
+Route::get('auth/google/callback', 'Auth\GoogleController@handleGoogleCallback');
+
+
 
 Route::prefix('admin')->group( function () {
 
