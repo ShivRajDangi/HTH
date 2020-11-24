@@ -19,7 +19,7 @@ class CreateTechniciansTable extends Migration
             $table->string('nice_name')->nullable();
             $table->string('email')->unique();
             $table->string('password')->nullable();
-            $table->string('mobile');
+            $table->string('mobile')->nullable();
             $table->string('address')->nullable();
             $table->string('city')->nullable();
             $table->string('district')->nullable();

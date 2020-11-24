@@ -12,7 +12,7 @@
         protected $guard = 'technician';
 
         protected $fillable = [
-            'name', 'email', 'password','mobile',
+            'name', 'email', 'password','mobile','google_id','address','field',
         ];
 
         protected $hidden = [

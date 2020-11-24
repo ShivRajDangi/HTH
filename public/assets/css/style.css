@@ -6,20 +6,33 @@ body {
   color: #444444;
 }
 
-a {
-  color: #ffb03b;
-}
 
-a:hover {
+a {
+  color: black;
+}
+a:hover{
+  color: #ffc56e;
+  text-decoration: none;
+}
+li a:hover {
+  color: #ffc56e;
+  text-decoration: none;
+}
+ul li{
+  padding:10px;
+}
+ul li a:active {
   color: #ffc56e;
   text-decoration: none;
 }
 
+ul .active > a{
+  color:#ffc56e;
+}
 h1{
   color:white;
   font-size:5vw;
 }
-
 
 
 /*--------------------------------------------------------------
@@ -677,7 +690,7 @@ section {
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
-/*.about {
+.about {
   background: #fffaf3;
 }
 
@@ -845,7 +858,7 @@ section {
     transform: scale(1, 1);
     opacity: 0;
   }
-}*/
+}
 
 /*--------------------------------------------------------------
 # Whu Us
@@ -1032,7 +1045,7 @@ section {
 /*--------------------------------------------------------------
 # Events
 --------------------------------------------------------------*/
-/*.events {
+.events {
   background: url(../img/events-bg.jpg) center center no-repeat;
   background-size: cover;
   position: relative;
@@ -1133,7 +1146,7 @@ section {
 
 /*--------------------------------------------------------------
 # Book A Table
---------------------------------------------------------------*/
+--------------------------------------------------------------
 .book-a-table .php-email-form {
   width: 100%;
   box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
@@ -1696,4 +1709,4 @@ p {
 }
 
 #about p{
-  font-size:1.1vw;}
+  font-size:15px;}

@@ -8,6 +8,9 @@ use App\Models\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+
 
 class RegisterController extends Controller
 {
@@ -48,7 +51,7 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \Illuminate\Contracts\Validation\Validator
      */
-    protected function validator(array $data)
+    /*protected function validator(array $data)
     {
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
@@ -56,19 +59,54 @@ class RegisterController extends Controller
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
     }
-
+*/
     /**
      * Create a new user instance after a valid registration.
      *
      * @param  array  $data
      * @return \App\User
      */
-    protected function create(array $data)
-    {
+    /*protected function create(array $data)
+    {dd('testing');
         return User::create([
             'full_name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
+    }*/
+    public function showRegisterForm() {
+        return view('frontend.pages.startup-customer');
     }
+    public function register(Request $request) {
+        //validiate form data
+
+        $this->validate($request,
+            [
+                'customer_email' => 'required|email',
+                'customer_password' => 'required|min:8',
+
+            ]
+        );
+
+// create user
+        
+        try{
+            $customer = User::create([
+                'full_name' => $request->customer_name,
+                'email' => $request->customer_email,
+                'password' => Hash::make($request->customer_password),
+            
+            ]);
+
+            //login technician
+           /* Auth::guard('web')->loginUsingId($customer->id);*/
+            return redirect()->route('customer.dashboard');
+
+        }catch(\Exception $exception){
+            return redirect()->back()->withInput($request->only('name','email'));
+
+        }
+
+    }
+
 }

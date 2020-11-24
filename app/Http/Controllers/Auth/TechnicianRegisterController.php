@@ -52,23 +52,29 @@ class TechnicianRegisterController extends Controller
 
     	$this->validate($request,
     		[
-    			'email' => 'required|string|email',
-    			'password' => 'required|string|min:8',
+    			'technician_email' => 'required|email',
+    			'technician_password' => 'required|min:8',
 
     		]
     	);
 // create admin user
+        
     	try{
-    		$admin = Technician::create([
-    			'full_name' => $request->name,
-    			'email' => $request->email,
-    			'password' => Hash::make($request->password),
-    			'mobile' => $request->mobile,
+    		$technician = Technician::create([
+    			'full_name' => $request->technician_name,
+    			'email' => $request->technician_email,
+    			'password' => Hash::make($request->technician_password),
+    			'mobile' => $request->technician_mobile,
+                'address' => $request->technician_address,
+                'field' => $request->technician_experience,
     		
     		]);
-
+        $update_technician = Technician::where('id',$technician->id)->get();
+        $update_technician->field = $request->technician_experience;
+        $update_technician->address = $request->technician_address;
+        $update_technician->save();
     		//login technician
-    		Auth::guard('technician')->loginUsingId($admin->id);
+    		/*Auth::guard('technician')->loginUsingId($technician->id);*/
     		return redirect()->route('technician.dashboard');
 
     	}catch(\Exception $exception){

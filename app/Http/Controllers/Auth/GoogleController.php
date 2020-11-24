@@ -8,6 +8,7 @@ use Socialite;
 use Auth;
 use Exception;
 use App\Models\User;
+use App\Models\Technician;
   
 class GoogleController extends Controller
 {
@@ -26,7 +27,7 @@ class GoogleController extends Controller
      *
      * @return void
      */
-    public function handleGoogleCallback()
+    public function handleGoogleCallback(Request $request)
     {
         try {
     
@@ -41,6 +42,7 @@ class GoogleController extends Controller
                 return redirect('/customer-home');
      
             }else{
+            	
                 $newUser = User::create([
                     'full_name' => $user->name,
                     'email' => $user->email,

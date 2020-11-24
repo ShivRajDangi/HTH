@@ -33,10 +33,14 @@ class TechnicianLoginController extends Controller
     	    //if successful
     	    return redirect()->intended(route('technician.dashboard'));
 
-			}
-			 //if unsuccessful
-	return redirect()->back()->with($request->only('email','remember'));
-
+			}else{
+                
+               //if unsuccessful
+                return redirect()->back()->with($request->only('email','remember'));
+  
+            }
+        
+			
     }
     public function logout(Request $request) {
     	

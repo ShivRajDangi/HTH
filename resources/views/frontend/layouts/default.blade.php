@@ -30,17 +30,46 @@
   
 </head>
 <body>
+  <nav class="navbar navbar-expand-lg sticky-top" style="background-color:#f0f1f3">
+  <a class="navbar-brand" href="#">HTH</a>
+  <button class="navbar-toggler bg-warning" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon" style=""></span>
+  </button>
 
+  <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-left:20%;">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#about">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">How It Works</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Team</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Help Forum</a>
+      </li>
+    </ul>
+    <!-- <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form> -->
+    <a href="{{url('startup')}}">
+      <button class="btn btn-button btn-outline-success my-2 my-sm-0 btn-sm btn-success" type="submit" style="border-radius:30%;color:white;">SIGN IN</button>
+    </a>
+  </div>
+</nav>
   
   <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top d-flex align-items-center header-transparent">
+  <!-- <header id="header" class="fixed-top d-flex align-items-center header-transparent">
     <div class="container d-flex align-items-center">
 
       <div class="logo mr-auto">
-        <!-- Uncomment below if you prefer to use an image logo -->
-         <!-- <a href="index.html"><img style="border-radius: 50%;"
-             src="assets/img/logo.png" alt="" class="img-fluid"></a>
-       -->
+      
        <a href="index.html"><span> HTH </span></a>
       </div>
 
@@ -52,14 +81,14 @@
           <li><a href="#contact">Team</a></li>
           <li><a href="#contact">Help Forum</a></li>
 
-          <li class="book-a-table text-center mx-25"><!-- <a href="{{url('login-signup')}}">START NOW</a> -->
+          <li class="book-a-table text-center mx-25">
             <a href="{{url('startup')}}">Sign In</a>
           </li>
         </ul>
-      </nav><!-- .nav-menu -->
+      </nav>
 
     </div>
-  </header><!-- End Header -->
+  </header> --><!-- End Header -->
   <!-- ======= Hero Section ======= -->
   <section id="hero">
     <div class="hero-container">

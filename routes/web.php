@@ -29,11 +29,27 @@ Route::get('startup-customer', function () {
     return view('frontend.pages.startup-customer');
 });
 
+Route::get('terms', function () {
+    return view('frontend.pages.terms');
+});
+
+Route::get('privacy', function () {
+    return view('frontend.pages.privacy');
+});
+
+
+
 Auth::routes();
+
 
 Route::get('/customer-home', 'Auth\HomeController@index')->name('home');
 Route::post('/customer/logout', 'Auth\LoginController@customerLogout')->name('customer.logout');
 Route::get('/login', 'Auth\LoginController@showLoginForm')->name('login');
+
+Route::get('/register', 'Auth\RegisterController@showRegisterForm')->name('register');
+Route::post('/register','Auth\RegisterController@register')->name('customer.register.submit');
+
+Route::post('/customer-query-submit', 'Auth\HomeController@submitQuery')->name('customer.query.submit');
 
 //Google routes
 Route::get('auth/google', 'Auth\GoogleController@redirectToGoogle');

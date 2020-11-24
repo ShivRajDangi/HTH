@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
+use App\Models\Technician;
+use App\Models\User;
 class AdminController extends Controller
 {
     
@@ -25,6 +27,8 @@ class AdminController extends Controller
      */
     public function index()
     {
-        return view('admin.admin');
+        $all_customers = User::all();
+        $all_technicians = Technician::all();
+        return view('admin.admin',['all_customers'=> $all_customers,'all_technicians'=> $all_technicians ,]);
     }
 }

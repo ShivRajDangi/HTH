@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Query;
 
 class TechnicianController extends Controller
 {
@@ -25,6 +26,7 @@ class TechnicianController extends Controller
      */
     public function index()
     {
-        return view('technician.technician');
+        $all_queries = Query::all();
+        return view('technician.technician',['all_queries'=>$all_queries]);
     }
 }
