@@ -33,11 +33,11 @@
                     <a class="nav-link active" data-toggle="tab" href="#customer_feed">My Feed</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#customer_share">Share</a>
+                    <a class="nav-link" data-toggle="tab" href="#customer_share">Profile</a>
                   </li>
                 </ul>
 
-                <button id="add_query_before" class="btn btn-button btn-danger btn-xs" data-toggle="modal" data-target="#query_box" style="display:none;">Add Query</button>
+                <button id="add_query_before" class="btn btn-button btn-danger btn-xs" data-toggle="modal" data-target="#box" style="display:none;">Add Query</button>
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -70,13 +70,17 @@
                                     {{ Auth::user()->email }}
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('customer.logout') }}"
+                                    <div class="text-center">
+                                         <img style="border-radius:30px;" class="img-circle" src="{{url('uploads')}}/{{Auth::user()->profile_photo}}" height="70" width="80">
+                                         <a class="dropdown-item" href="{{ route('customer.logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
+                                    </div>
+                                    
 
-                                    <form id="logout-form" action="{{ route('admin.logout') }}" method="POST" class="d-none">
+                                    <form id="logout-form" action="{{ route('customer.logout') }}" method="POST" class="d-none">
                                         @csrf
                                     </form>
                                 </div>
@@ -86,7 +90,7 @@
                     </ul>
                 </div>
             </div>
-            <button class="btn btn-button btn-danger btn-xs" data-toggle="modal" data-target="#query_box" id="add_query_after">Add Query</button>
+            <button class="btn btn-button btn-danger btn-xs" data-toggle="modal" data-target="#box" id="add_query_after">Add Query</button>
         </nav>
 
         <main class="py-4">

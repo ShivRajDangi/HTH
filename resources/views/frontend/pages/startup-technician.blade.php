@@ -62,24 +62,7 @@
                     		<input type="text" class="form-control" id="technician_address" aria-describedby="emailHelp" placeholder="Enter Address" name="technician_address" required>
                   		</div>
                   	</div>
-                  	<div class="col-md-6">
-                  		<div class="form-group text-left">
-                    		<label for="technician_question">Do you have full time job or part time job in your field</label>
-                    		<div class="form-check">
-                      			<label class="form-check-label">
-                      			<input type="radio" class="form-check-input" name="technician_question">Yes
-                      			</label>
-                    		</div>
-                    		<div class="form-check">
-                      			<label class="form-check-label">
-                      			<input type="radio" class="form-check-input" name="technician_question">No
-                      			</label>
-                    		</div>
-                  		</div>
-                  	</div>
-              	</div>
-                 
-                 <div class="form-group text-left">
+                  	<div class="form-group text-left">
                     <label for="technician_experience">Select Area in which you are exprienced</label>
                     <select class="form-control" name="technician_experience" 
                             id="technician_experience">
@@ -100,6 +83,7 @@
                       <option value="Home Theater Specialist"></option>   
                     </select>
                   </div>
+              	</div>
                 <div class="row">
                   	<div class="col-md-12">
                   		<div class="form-check text-left mt-5">

@@ -55,6 +55,8 @@ Route::post('/customer-query-submit', 'Auth\HomeController@submitQuery')->name('
 Route::get('auth/google', 'Auth\GoogleController@redirectToGoogle');
 Route::get('auth/google/callback', 'Auth\GoogleController@handleGoogleCallback');
 
+Route::any('/customer/single-query/{id}', 'Auth\HomeController@singleQueryPage')->name('customer.single-query');
+Route::any('/customer-profile-update','Auth\HomeController@updateProfile')->name('customer.profile.submit');
 
 
 Route::prefix('admin')->group( function () {
@@ -78,10 +80,14 @@ Route::prefix('technician')->group( function () {
 
 	//dashboard route
 	Route::get('/','Auth\TechnicianController@index')->name('technician.dashboard');
+	Route::any('/interested-query/{query_id}','Auth\TechnicianController@interestedToQuery')->name('technician.interested');
 
 	Route::get('technician-signup-2', function () {
     return view('technician.technician-signup-2');
 	});
+
+	Route::any('/technician-profile-update','Auth\TechnicianController@updateProfile')->name('technician.profile.submit');
+
 
 	//login route
 	Route::get('/login','Auth\TechnicianLoginController@showLoginForm')->name('technician.login');

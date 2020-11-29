@@ -21,6 +21,7 @@ class CreateQueriesTable extends Migration
             $table->string('query_background')->nullable();
             $table->boolean('status')->nullable()->default(false);
             $table->string('solution_mode')->nullable();
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }

@@ -13,7 +13,7 @@
 	<div class="card text-center p-5" style="margin-top:20%">
 		<div class="card-header"> <h4><b>Signup To Ask your Queries To An Expert </b></h4></div>
 		<div class="card-body ">
-			<p>Already have an account ? <a href="" data-toggle="modal" data-target="#customer">Sign Up</a></p>
+			<p>Don't have an account ? <a href="" data-toggle="modal" data-target="#customer">Sign Up</a></p>
 			<div class="row mt-2">
 				<div class="col-md-6">
 			        <div class="card text-center">

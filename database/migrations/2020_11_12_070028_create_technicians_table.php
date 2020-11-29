@@ -20,6 +20,7 @@ class CreateTechniciansTable extends Migration
             $table->string('email')->unique();
             $table->string('password')->nullable();
             $table->string('mobile')->nullable();
+            $table->string('bio')->nullable();
             $table->string('address')->nullable();
             $table->string('city')->nullable();
             $table->string('district')->nullable();
@@ -31,6 +32,7 @@ class CreateTechniciansTable extends Migration
             $table->string('field')->nullable();
             $table->string('sub_field')->nullable();
             $table->string('profession')->nullable();
+            $table->integer('experience')->nullable();
             $table->string('rate')->nullable();
             $table->string('rating')->nullable();
             $table->string('google_id')->nullable();
