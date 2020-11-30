@@ -1,6 +1,78 @@
-@extends('layouts.admin-app')
+@if(\Illuminate\Support\Facades\Auth::guard('admin')->check())
+<!doctype html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-@section('content')
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    <title>HTH Admin Dashboard</title>
+
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}" defer></script>
+
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
+    <!-- Styles -->
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+</head>
+<body>
+<div class="container-fluid">
+
+    <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="{{ url('/') }}">
+             <!--    {{ config('app.name', 'Laravel') }} -->
+             
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <!-- Left Side Of Navbar -->
+                 
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-toggle="tab" href="#admin_dashboard" id="admin_tab">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#admin_customer" id="customer_tab">Customer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#admin_technician" id="technician_tab">Technician</a>
+                    </li>
+                </ul>
+                
+                <ul class="navbar-nav ml-auto">
+               
+                    @if(\Illuminate\Support\Facades\Auth::guard('admin')->check())
+                    <li class="nav-item dropdown">
+                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            {{ Auth::user()->email }}
+                        </a>
+
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{{ route('admin.logout') }}"
+                               onclick="event.preventDefault();
+                                             document.getElementById('logout-form').submit();">
+                                {{ __('Logout') }}
+                            </a>
+
+                            <form id="logout-form" action="{{ route('admin.logout') }}" method="POST" class="d-none">
+                                @csrf
+                            </form>
+                        </div>
+                    </li>
+                    @endif
+                </ul>
+            </div>
+        </div>
+    </nav>
 
 <div class="container-fluid">
     <div class="tab-content" style="margin:20px;">
@@ -12,6 +84,7 @@
                             <div class="card-body">
                                 <div class="card-body">
                                  Admin Area
+
                                 </div>
                             </div>
                         </div>
@@ -22,45 +95,44 @@
         <div class="tab-pane container-fluid" id="admin_customer">
             <div class="container-fluid">
                 <div class="row justify-content-center">
-                    <div class="col-md-8">
+                    <div class="col-md-12">
                         <div class="card">
                             <div class="card-body">
-                                <div class="card-body">
-                                    <div class="container-fluid">
-                                        <div class="table-responsive">          
-                                            <table class="table">
-                                                <thead>
-                                                  <tr>
-                                                    <th>#id</th>
-                                                    <th>#Name</th>
-                                                    <th>Email</th>
-                                                    <th>Mobile</th>
-                                                    <th>Status</th>
-                                                    <th>Address</th>
-                                                
-                                                  </tr>
-                                                </thead>
-                                                <tbody>
-                                                    @foreach($all_customers as $all_customers)
-                                                  <tr>
-                                                    <td>{{$all_customers->id}}</td>
-                                                    <td>{{$all_customers->full_name}}</td>
-                                                    <td> {{$all_customers->email}} </td>
-                                                    <td>{{$all_customers->mobile}}</td>
-                                                    @if($all_customers->status == true || $all_customers->status == '1')
-                                                        <td>Active</td>
-                                                    @else
-                                                        <td>deactive</td>
-                                                    @endif
-                                                    <td>{{$all_customers->address}}</td>
-                                                    <td></td>
-                                                  </tr>
-                                                  @endforeach
-                                                </tbody>
-                                            </table>
-                                        </div>
+                                <div class="container-fluid">
+                                    <div class="table-responsive">          
+                                        <table class="table">
+                                            <thead>
+                                              <tr>
+                                                <th>#id</th>
+                                                <th>#Name</th>
+                                                <th>Email</th>
+                                                <th>Mobile</th>
+                                                <th>Status</th>
+                                                <th>Address</th>
+                                            
+                                              </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach($all_customers as $all_customers)
+                                              <tr>
+                                                <td>{{$all_customers->id}}</td>
+                                                <td>{{$all_customers->full_name}}</td>
+                                                <td> {{$all_customers->email}} </td>
+                                                <td>{{$all_customers->mobile}}</td>
+                                                @if($all_customers->status == true || $all_customers->status == '1')
+                                                    <td>Active</td>
+                                                @else
+                                                    <td>deactive</td>
+                                                @endif
+                                                <td>{{$all_customers->address}}</td>
+                                                <td></td>
+                                              </tr>
+                                              @endforeach
+                                            </tbody>
+                                        </table>
                                     </div>
                                 </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -70,9 +142,31 @@
 
         <div class="tab-pane container-fluid" id="admin_technician">
             <div class="container-fluid">
+                @if(session()->has('message'))
+                    <div class=" m-1 alert alert-success alert-dismissible text-center">
+                          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                        {{ session()->get('message') }}
+                    </div>
+                    <script>
+                        window.addEventListener("load", function(){
+                            $("#technician_tab").addClass('active');
+                            $("#admin_technician").addClass('active');
+                            $("#admin_tab").removeClass('active');
+                            $("#admin_dashboard").removeClass('active');
+                        });   
+                    </script>
+                    @else
+                        <script>
+                        window.addEventListener("load", function(){
+                            $("#admin_tab").addClass('active');
+                            $("#admin_dashboard").addClass('active');
+                        });
+                        
+                    </script>
+                @endif
                 <div class="table-responsive">          
                     <table class="table">
-                        <thead>
+                        <thead class="text-center">
                           <tr>
                             <th>#id</th>
                             <th>Name</th>
@@ -85,7 +179,7 @@
 
                           </tr>
                         </thead>
-                        <tbody>
+                        <tbody class="text-center">
                             @foreach($all_technicians as $all_technicians)
                           <tr>
                             <td>{{$all_technicians->id}}</td>
@@ -99,7 +193,22 @@
                             @endif
                             <td>{{$all_technicians->address}}</td>
                             <td>{{$all_technicians->field}}</td>
-                            <td><button class="btn btn-button btn-primary btn-sm m-1">Activate</button>
+
+                            @if($all_technicians->status == true || $all_technicians->status == '1')
+                                <td rowspan="1">
+                                    <form method="POST" action="{{url('admin/technician-update')}}/{{$all_technicians->status}}">
+                                    @csrf
+                                        <input type="hidden" name="id" value="{{$all_technicians->id}}"/>
+                                        <button type="submit" class="btn btn-button btn-primary btn-sm m-1">Deactivate</button>
+                                    </form>
+                            @else
+                                <td rowspan="1">
+                                    <form method="POST" action="{{url('admin/technician-update')}}/{{$all_technicians->status}}">
+                                    @csrf
+                                        <input type="hidden" name="id" value="{{$all_technicians->id}}"/>
+                                        <button type="submit" class="btn btn-button btn-primary btn-sm m-1">Activate</button>
+                                    </form>
+                            @endif
                             <button class="btn btn-button btn-primary btn-sm m-1">Delete</button></td>
                             
                           </tr>
@@ -115,5 +224,18 @@
     
     </div>
 </div>
-
-@endsection
+</div>
+<script>
+   /*$(document).ready(function(){
+    $('a[data-toggle="tab"]').on('show.bs.tab', function(e) {
+            localStorage.setItem('activeTab', $(e.target).attr('href'));
+    });
+    var activeTab = localStorage.getItem('activeTab');
+    if(activeTab){
+         $('#IDOFTAB a[href="' + activeTab + '"]').tab('show');
+    }
+});*/
+</script>
+</body>
+</html>
+@endif

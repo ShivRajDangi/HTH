@@ -84,14 +84,14 @@
                     </select>
                   </div>
               	</div>
-                <div class="row">
+                <!-- <div class="row">
                   	<div class="col-md-12">
                   		<div class="form-check text-left mt-5">
                     		<input type="checkbox" class="form-check-input" id="exampleCheck1">
                     		<label class="form-check-label" for="exampleCheck1">keep me sign in</label>
                   		</div>
                   	</div>
-                </div>
+                </div> -->
                 <button type="submit" class="btn btn-success ml-5 " >SIGNUP</button>
                 </form>
 		</div>
@@ -122,11 +122,7 @@
 						            <label for="technician_password">Password</label>
 						            <input type="password" class="form-control" id="technician_password" placeholder="Password" name="password">
 					            </div>
-					            <div class="form-check text-left">
-						            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-						            <label class="form-check-label" for="exampleCheck1">Check me out</label>
-					            </div>
-				            	<!-- <button type="submit" class="btn btn-success" style="margin-top: -50px;"> Login </button> -->
+					            
 				            	 <button type="submit" class="btn btn-primary">
                                  {{ __('Login') }}
                              </button>

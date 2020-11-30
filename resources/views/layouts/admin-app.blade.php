@@ -33,18 +33,19 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
+                    @if(\Illuminate\Support\Facades\Auth::guard('admin')->check()) 
                     <ul class="nav nav-tabs">
                         <li class="nav-item">
-                            <a class="nav-link active" data-toggle="tab" href="#admin_dashboard">Dashboard</a>
+                            <a class="nav-link active" data-toggle="tab" href="#admin_dashboard" id="admin_tab">Dashboard</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" data-toggle="tab" href="#admin_customer">Customer</a>
+                            <a class="nav-link" data-toggle="tab" href="#admin_customer" id="customer_tab">Customer</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" data-toggle="tab" href="#admin_technician">Technician</a>
+                            <a class="nav-link" data-toggle="tab" href="#admin_technician" id="technician_tab">Technician</a>
                         </li>
                     </ul>
-
+                    @endif
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
@@ -57,7 +58,7 @@
                                     <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
                             @endif -->
-                            HTH Admin Login
+                            
                         @else
                             @if(\Illuminate\Support\Facades\Auth::guard('admin')->check())
                             <li class="nav-item dropdown">

@@ -13,12 +13,17 @@
                                 <div class="card-header bg-white text-center">{{$all_queries->query_background}}</div>
 
                                 <div class="card-body text-center">
+                                  <div class="container m-2">
                                   <!-- <a href="{{url('customer/single-query')}}/{{$all_queries->id}}"> -->
                                      {{$all_queries->query}}
                                   <!--  </a> -->
-                                    <div class="container m-2">
-                                        <img class="img-responsive" src="" height="200" width="450">
+                                </div>
+                                  @if($all_queries->image)
+                                   <div class="container m-2">
+                                      <img class="img-responsive" src="{{url('uploads')}}/{{$all_queries->image}}" height="50%" width="70%">
+                                      
                                    </div>
+                                   @endif
                                    <a href="{{url('technician/interested-query')}}/{{$all_queries->id}}">  
                                         <button class="btn btn-button btn-danger btn-sm">Interested</button>
                                     </a>

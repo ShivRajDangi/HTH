@@ -30,7 +30,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $all_query = Query::orderby('id','desc')->get();
+        $all_query = Query::where('user_id',Auth::user()->id)->orderby('id','desc')->get();
         /*dd($all_query);*/
         $customer_details = User::where('id',Auth::user()->id)->first();
        /* dd($customer_details->email);*/
@@ -45,6 +45,9 @@ class HomeController extends Controller
             $imageName = time().'.'.$request->image->getClientOriginalExtension();
             $request->image->move(public_path('/uploads'), $imageName);
         }
+
+        /*$imageName = $request->file('image')->store('Images');*/
+
 
         /*$image->name = $imageName;
         $image->path = '/storage/'.$path;*/

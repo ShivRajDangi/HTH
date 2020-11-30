@@ -21,7 +21,7 @@
                                    @if($all_query->image)
                                    <div class="container m-2">
                                       <img class="img-responsive" src="{{url('uploads')}}/{{$all_query->image}}" height="50%" width="70%">
-                                      <!-- <img class="img-responsive" src="" height="200" width="450"> -->
+                                      
                                    </div>
                                    @endif
                                 </div>

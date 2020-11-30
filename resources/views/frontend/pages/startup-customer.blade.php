@@ -99,13 +99,11 @@
 			                    <input type="password" class="form-control" id="customer_password" placeholder="Enter Password" name="customer_password">
 		                  	</div>
 
-		                  	<div class="form-check text-left">
+		                  	<!-- <div class="form-check text-left">
 			                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
 			                    <label class="form-check-label" for="exampleCheck1">remember me</label>
-		                  	</div>
+		                  	</div> -->
 
-		                  	<!-- <button type="submit" name="submit" value="submit" class="btn btn-success" style="margin-top: -50px;" >
-		                  Login</button> -->
 		                  <button type="submit" class="btn btn-primary">
                                     {{ __('Sign Up') }}
                             </button>

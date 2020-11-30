@@ -29,7 +29,7 @@ class TechnicianController extends Controller
      */
     public function index()
     {
-        $all_queries = Query::where('query_background',Auth::user()->field)->get();
+        $all_queries = Query::where('query_background',Auth::user()->field)->orderby('id','desc')->get();
         /*dd($all_queries);*/
         $technician_details = Technician::where('id',Auth::user()->id)->first();
         

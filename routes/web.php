@@ -63,6 +63,7 @@ Route::prefix('admin')->group( function () {
 
 	//dashboard route
 	Route::get('/','Auth\AdminController@index')->name('admin.dashboard');
+	Route::any('/technician-update/{status}','Auth\AdminController@technicianUpdate')->name('admin.dashboard.technician-update');
 
 	//login route
 	Route::get('/login','Auth\AdminLoginController@showLoginForm')->name('admin.login');
