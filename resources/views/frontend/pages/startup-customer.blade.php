@@ -10,7 +10,7 @@
 		main container for login-sign
 ------------------------------------->
 <div class="container P-2">
-	<div class="card text-center p-5" style="margin-top:20%">
+	<div class="card text-center p-5" style="margin-top:5%">
 		<div class="card-header"> <h4><b>Signup To Ask your Queries To An Expert </b></h4></div>
 		<div class="card-body ">
 			<p>Don't have an account ? <a href="" data-toggle="modal" data-target="#customer">Sign Up</a></p>
@@ -24,11 +24,21 @@
 		                  	<div class="form-group text-left">
 			                    <label for="customer_email">Email address</label>
 			                    <input type="email" class="form-control" id="customer_email" aria-describedby="emailHelp" placeholder="Enter email" name="email">
+			                    @error('email')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
 		                  	</div>
 
 		                  	<div class="form-group text-left">
 			                    <label for="customer_password">Password</label>
 			                    <input type="password" class="form-control" id="customer_password" placeholder="Enter Password" name="password">
+			                    @error('password')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
 		                  	</div>	                	 
 	              		</div>
 	              		<div class="card-footer text-muted p-3">
@@ -39,7 +49,7 @@
 		            		</form>
 			        </div>
 				</div>
-				<div class="col-md-6">
+				<div class="col-md-6 pt-2">
 					<a href="{{url('auth\google')}}">
 						<div class="btn-group btn-lg" role="group" style="padding:0px;">
 						  <button type="button" class="btn btn-button btn-outline-primary" style="background-color:white;"><img width="30" src="{{url('assets/img/google-logo.png')}}"/></button>

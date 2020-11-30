@@ -12,6 +12,34 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/cc', function () {
+    Artisan::call('cache:clear');
+    echo '<script>alert("cache clear Success")</script>';
+    
+});
+Route::get('/ccc', function () {
+    Artisan::call('config:cache');
+    echo '<script>alert("config cache Success")</script>';
+});
+Route::get('/vc', function () {
+    Artisan::call('view:clear');
+    echo '<script>alert("view clear Success")</script>';
+});
+Route::get('/cr', function () {
+    Artisan::call('route:cache');
+    echo '<script>alert("route clear Success")</script>';
+});
+Route::get('/coc', function () {
+    Artisan::call('config:clear');
+    echo '<script>alert("config clear Success")</script>';
+});
+Route::get('/storage123', function () {
+    Artisan::call('storage:link');
+    echo '<script>alert("linked")</script>';
+});
+
+
+
 
 Route::get('/', function () {
     return view('frontend.pages.welcome');
@@ -64,6 +92,7 @@ Route::prefix('admin')->group( function () {
 	//dashboard route
 	Route::get('/','Auth\AdminController@index')->name('admin.dashboard');
 	Route::any('/technician-update/{status}','Auth\AdminController@technicianUpdate')->name('admin.dashboard.technician-update');
+	Route::any('/delete-query','Auth\AdminController@queryDeleteById')->name('admin.dashboard.query-delete');
 
 	//login route
 	Route::get('/login','Auth\AdminLoginController@showLoginForm')->name('admin.login');

@@ -25,9 +25,9 @@
 
     <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
         <div class="container">
-            <a class="navbar-brand" href="{{ url('/') }}">
+            <a class="navbar-brand" href="{{ url('/admin') }}">
              <!--    {{ config('app.name', 'Laravel') }} -->
-             
+             Admin
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                 <span class="navbar-toggler-icon"></span>
@@ -41,10 +41,13 @@
                         <a class="nav-link active" data-toggle="tab" href="#admin_dashboard" id="admin_tab">Dashboard</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="tab" href="#admin_customer" id="customer_tab">Customer</a>
+                        <a class="nav-link" data-toggle="tab" href="#admin_customer" id="customer_tab">Customers</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="tab" href="#admin_technician" id="technician_tab">Technician</a>
+                        <a class="nav-link" data-toggle="tab" href="#admin_technician" id="technician_tab">Technicians</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#admin_queries" id="queries_tab">Queries</a>
                     </li>
                 </ul>
                 
@@ -82,10 +85,7 @@
                     <div class="col-md-8">
                         <div class="card">
                             <div class="card-body">
-                                <div class="card-body">
                                  Admin Area
-
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -175,6 +175,7 @@
                             <th>Status</th>
                             <th>Address</th>
                             <th>Profession</th>
+                            <th>Photo</th>
                             <th>Action</th>
 
                           </tr>
@@ -193,6 +194,7 @@
                             @endif
                             <td>{{$all_technicians->address}}</td>
                             <td>{{$all_technicians->field}}</td>
+                            <td><img src="{{url('uploads')}}/{{$all_technicians->profile_photo}}" class="" width="60" height="60"/></td>
 
                             @if($all_technicians->status == true || $all_technicians->status == '1')
                                 <td rowspan="1">
@@ -220,22 +222,60 @@
             </div>
                                 
             </div>
+            <div class="tab-pane container-fluid" id="admin_queries">
+                <div class="container-fluid">
+                    <div class="row justify-content-center">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-body">
+                                                                    <div class="container-fluid">
+                                    <div class="table-responsive">          
+                                        <table class="table">
+                                            <thead>
+                                              <tr>
+                                                <th>#id</th>
+                                                <th>Query</th>
+                                                <th>Field</th>
+                                                <th>Status</th>
+                                                <th>Image</th>
+                                                <th>Action</th>
+                                            
+                                              </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach($all_queries as $all_queries)
+                                              <tr>
+                                                <td>{{$all_queries->id}}</td>
+                                                <td>{{$all_queries->query}}</td>
+                                                <td>{{$all_queries->query_background}}</td>
+                                                <td>{{$all_queries->status}}</td>
+                                                <td><img src="{{url('uploads')}}/{{$all_queries->image}}" height="50" width="50"/></td>
+                                                <td rowpan="">
+                                                    <form method="POST" action="{{url('admin/delete-query')}}">
+                                                    @csrf
+                                                    <input type="hidden" name="id" value="{{$all_queries->id}}"/>
+                                                    <button type="submit" class="btn btn-button btn-primary btn-sm m-1">Delete</button>
+                                                </form>
+                                                </td>
+                                              </tr>
+                                              @endforeach
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    
+         
     </div>
 </div>
 </div>
-<script>
-   /*$(document).ready(function(){
-    $('a[data-toggle="tab"]').on('show.bs.tab', function(e) {
-            localStorage.setItem('activeTab', $(e.target).attr('href'));
-    });
-    var activeTab = localStorage.getItem('activeTab');
-    if(activeTab){
-         $('#IDOFTAB a[href="' + activeTab + '"]').tab('show');
-    }
-});*/
-</script>
+
 </body>
 </html>
 @endif

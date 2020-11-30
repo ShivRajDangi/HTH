@@ -10,7 +10,7 @@
 		main container for login-sign
 ------------------------------------->
 <div class="container P-2">
-	<div class="card text-center p-5" style="margin-top:20%">
+	<div class="card text-center p-5" style="margin-top:5%">
 		<div class="card-header"><h4><b>Signup To Become An Expert </b></h4> </div>
 		<div class="card-body ">
 			<p>Already have an account ? <a href="" data-toggle="modal" data-target="#technician">Log In</a></p>
@@ -62,6 +62,7 @@
                     		<input type="text" class="form-control" id="technician_address" aria-describedby="emailHelp" placeholder="Enter Address" name="technician_address" required>
                   		</div>
                   	</div>
+                  	<div class="col-md-6">
                   	<div class="form-group text-left">
                     <label for="technician_experience">Select Area in which you are exprienced</label>
                     <select class="form-control" name="technician_experience" 
@@ -84,6 +85,7 @@
                     </select>
                   </div>
               	</div>
+            </div>
                 <!-- <div class="row">
                   	<div class="col-md-12">
                   		<div class="form-check text-left mt-5">
@@ -92,7 +94,7 @@
                   		</div>
                   	</div>
                 </div> -->
-                <button type="submit" class="btn btn-success ml-5 " >SIGNUP</button>
+                <button type="submit" class="btn btn-success ml-2 mt-2 " >SIGNUP</button>
                 </form>
 		</div>
 	</div>
